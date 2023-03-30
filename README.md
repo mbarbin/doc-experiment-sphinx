@@ -10,5 +10,8 @@ github pages (or a platform such as readthedocs.io), which would be
 built using markdown files with mdx enabled, including OCaml libraries
 API documentation (odoc).
 
-This is work in progress. If I like the result, I may go ahead and
-reuse that setup in other projects.
+- OCaml API documentation (odoc) deployed to [GitHub Pages](https://mbarbin.github.io/doc-experiment/odoc)
+- Sphinx doc deployed to [GitHub Pages](https://mbarbin.github.io/doc-experiment/sphinx/index.html)
+- Sphinx doc deployed to [Readthedocs.io](https://doc-experiment.readthedocs.io/en/latest/index.html)
+
+At the moment I haven't found a way to have both docs share a search index. This is work in progress.
