@@ -5,3 +5,6 @@
  (libraries core)
  (preprocess
   (pps ppx_jane)))
+
+(mdx
+ (files :standard - *.mli))

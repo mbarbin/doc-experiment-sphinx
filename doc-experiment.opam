@@ -9,9 +9,10 @@ doc: "https://github.com/mbarbin/doc-experiment"
 bug-reports: "https://github.com/mbarbin/doc-experiment/issues"
 depends: [
   "ocaml" {>= "4.13"}
-  "dune" {>= "2.0.0"}
+  "dune" {>= "3.5"}
   "core" {>= "v0.15"}
   "core_unix" {>= "v0.15"}
+  "mdx" {>= "2.2"}
   "ppx_jane" {>= "v0.15"}
 ]
 build: [
