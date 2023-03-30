@@ -38,7 +38,8 @@ jobs:
       - name: Build sphinx-doc
         uses: ammaraskar/sphinx-action@master
         with:
-          build-command: "sphinx-build doc _build/docs/sphinx"
+          docs-folder: "doc/"
+          build-command: "sphinx-build . ../_build/docs/sphinx"
 
       - name: Deploy doc to gh-pages
         uses: peaceiris/actions-gh-pages@v3
