@@ -28,20 +28,19 @@ jobs:
       - run: opam depext --install odoc
         shell: bash
 
-      - name: build-doc
+      - name: Build odoc
         run: |
              make odoc
              touch _build/docs/.nojekyll
              touch _build/docs/sphinx/.nojekyll
-             touch _build/docs/doc/.nojekyll
+             touch _build/docs/odoc/.nojekyll
 
-      - name: Build HTML
+      - name: Build sphinx-doc
         uses: ammaraskar/sphinx-action@master
         with:
-          docs-folder: "doc/"
-          build-command: "sphinx-build -b html doc _build/docs/sphinx"
+          build-command: "sphinx-build doc _build/docs/sphinx"
 
-      - name: Deploy odoc to GitHub Pages
+      - name: Deploy doc to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ github.token }}
