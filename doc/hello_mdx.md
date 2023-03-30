@@ -6,3 +6,7 @@ This section verifies that mdx is enabled:
 # 1 + 2;;
 - : int = 3
 ```
+
+## Hello subsection
+
+Does this section get listed into the main toctree by default?
