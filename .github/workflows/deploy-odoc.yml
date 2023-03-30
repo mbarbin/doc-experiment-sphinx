@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Use OCaml 5.0.x
         uses: ocaml/setup-ocaml@v2
@@ -22,5 +22,27 @@ jobs:
 #            janestreet-bleeding: https://ocaml.janestreet.com/opam-repository
 #            janestreet-bleeding-external: https://github.com/janestreet/opam-repository.git#external-packages
 
+      - run: opam install . --deps-only --with-doc
+        shell: bash
+
+      - run: opam depext --install odoc
+        shell: bash
+
+      - name: build-doc
+        run: |
+             make odoc
+             touch _build/docs/.nojekyll
+             touch _build/docs/sphinx/.nojekyll
+             touch _build/docs/doc/.nojekyll
+
+      - name: Build HTML
+        uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "doc/"
+          build-command: "sphinx-build -b html doc _build/docs/sphinx"
+
       - name: Deploy odoc to GitHub Pages
-        uses: ocaml/setup-ocaml/deploy-doc@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ github.token }}
+          publish_dir: _build/docs
