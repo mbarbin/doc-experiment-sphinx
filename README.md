@@ -2,6 +2,7 @@
 
 [![Actions Status](https://github.com/mbarbin/doc-experiment/workflows/CI/badge.svg)](https://github.com/mbarbin/doc-experiment/actions/workflows/ci.yml)
 [![Deploy odoc Actions Status](https://github.com/mbarbin/doc-experiment/workflows/Deploy-odoc/badge.svg)](https://github.com/mbarbin/doc-experiment/actions/workflows/deploy-odoc.yml)
+[![Documentation Status](https://readthedocs.org/projects/doc-experiment/badge/?version=latest)](https://doc-experiment.readthedocs.io/en/latest/?badge=latest)
 
 This is a toy project that I use to experiment with documentation
 tools. In particular I'd like to see if I can get a doc hosting
