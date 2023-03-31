@@ -28,12 +28,18 @@ jobs:
       - run: opam depext --install odoc
         shell: bash
 
+      - name: Prepare doc directory
+        run: |
+             mkdir -p _build/docs
+             mkdir -p _build/docs/odoc
+             mkdir -p _build/docs/sphinx
+             cp README.md _build/docs/.
+             touch _build/docs/sphinx/.nojekyll
+             touch _build/docs/odoc/.nojekyll             
+
       - name: Build odoc
         run: |
              make odoc
-             touch _build/docs/.nojekyll
-             touch _build/docs/sphinx/.nojekyll
-             touch _build/docs/odoc/.nojekyll
 
       - name: Build sphinx-doc
         uses: ammaraskar/sphinx-action@master
