@@ -46,7 +46,7 @@ jobs:
 
       - name: More doc files
         run: |
-               cp README.md _build/docs/.
+               touch _build/docs/.nojekyll
                touch _build/docs/sphinx/.nojekyll
                touch _build/docs/odoc/.nojekyll
 
