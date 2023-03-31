@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: Doc experiment
 description: Experimenting with documentation tools
+exclude: [odoc, sphinx]
