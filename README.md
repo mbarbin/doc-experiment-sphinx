@@ -4,7 +4,7 @@
 [![Deploy doc Actions Status](https://github.com/mbarbin/doc-experiment-sphinx/workflows/deploy-doc/badge.svg)](https://github.com/mbarbin/doc-experiment-sphinx/actions/workflows/deploy-doc.yml)
 [![Documentation Status](https://readthedocs.org/projects/doc-experiment-sphinx/badge/?version=latest)](https://doc-experiment.readthedocs.io/en/latest/?badge=latest)
 
-:warning: I have migrated my experimentation to [this]((https://github.com/mbarbin/doc-experiment-docusaurus) repository instead.
+:warning: I have migrated my experimentation to [this](https://github.com/mbarbin/doc-experiment-docusaurus) repository instead.
 
 This is a toy project that I use to experiment with documentation
 tools. In particular I'd like to see if I can get a doc hosted on
